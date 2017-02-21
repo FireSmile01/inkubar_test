@@ -103,3 +103,12 @@
 .this{
 	display: none;
 }
+
+#allPage{
+	min-height: 630px;
+}
+
+body{
+	position:relative;
+	min-height: 630px;
+}
