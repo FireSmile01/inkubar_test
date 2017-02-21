@@ -10,7 +10,7 @@ function showEl(){
 }
 var i = 0;
 function saveEl(){
-	let div = document.getElementById("content");
+	let div = document.getElementById("patternContent");
 	let newEl = document.createElement("div");
 	let pattern = document.getElementById("pattern");
 	let search = document.getElementById("search");
@@ -46,7 +46,8 @@ function saveEl(){
 	text3.value = "";
 	textInfo.value = "";
 	
-	div.insertBefore(newEl, search);
+	div.insertBefore(newEl, div.firstChild);
+
 	i++;
 }
 

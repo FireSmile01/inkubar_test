@@ -43,34 +43,31 @@
 			<input type="text" class="searchText" value="" onkeyup="find(value)">
 		</div>
 		
-		<div id="pattern">
-			<div class="pole1">
-				<div class="info">
-					<div  class="rovno"><input type="text" class="createInfo" id="patternInfo1" value="" name="text1" onclick="newInf(value,event,name)"></div>
+		<div id ="patternContent">	
+			<div id="pattern">
+				<div class="pole1">
+					<div class="info">
+						<div  class="rovno"><input type="text" class="createInfo" id="patternInfo1" value="" name="text1" onclick="newInf(value,event,name)"></div>
+					</div>
+					
+					<div class="info">
+						<div  class="rovno"><input type="text" class="createInfo" id="patternInfo2" value="" name="text2" onclick="newInf(value,event,name)"></div>
+					</div>
+					
+					<div class="info">
+						<div  class="rovno"><input type="text" class="createInfo" id="patternInfo3" value="" name="text3" onclick="newInf(value,event,name)"></div>
+					</div>
 				</div>
 				
-				<div class="info">
-					<div  class="rovno"><input type="text" class="createInfo" id="patternInfo2" value="" name="text2" onclick="newInf(value,event,name)"></div>
+				<div class="pole3">
+					<textarea class="patterInfo2" id = "patternInfo4" name="textInfo" onclick="newInf(value,event,name)"></textarea>
 				</div>
 				
-				<div class="info">
-					<div  class="rovno"><input type="text" class="createInfo" id="patternInfo3" value="" name="text3" onclick="newInf(value,event,name)"></div>
+				<div class="deleteSquare" onClick="deleteEl(event)">
+					X
 				</div>
 			</div>
-			
-			<div class="pole3">
-				<textarea class="patterInfo2" id = "patternInfo4" name="textInfo" onclick="newInf(value,event,name)"></textarea>
-			</div>
-			
-			<div class="deleteSquare" onClick="deleteEl(event)">
-				X
-			</div>
 		</div>
-		
-		<div id="search">
-
-		</div>
-		
 	</div>
 </div>
 </body>
