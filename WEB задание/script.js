@@ -53,7 +53,7 @@ function saveEl(){
 
 function deleteEl(event){
 	let elem = event.path[1];
-	let div = document.getElementById("content");
+	let div = document.getElementById("patternContent");
 	let result = confirm("Вы точно хотите удалить запись?");
 	if (result)
 		div.removeChild(elem);
