@@ -55,33 +55,35 @@ function deleteEl(event){
 	let elem = event.path[1];
 	let div = document.getElementById("patternContent");
 	let result = confirm("Вы точно хотите удалить запись?");
-	if (result)
+	if (result) {
 		div.removeChild(elem);
+		localStorage.removeItem(elem.id);
+	}
 }
 
 function find(value){
-	console.log(value);
-	
-	for(let i=0;i<localStorage.length;i++)
-		if (~localStorage[i].indexOf(value)) {
-			let div = document.getElementById(i);
-			div.classList.remove("this");
+    let s = localStorage.length;
+	for(let i=0; i<s; i++)
+	{
+		let div = document.getElementById(i);
+		if(!div) {
+			++s;
 			continue;
 		}
-		else	{
-				let div = document.getElementById(i);
-				div.classList.add("this");	
-		}
-		
-			
+		if (~localStorage[i].indexOf(value))
+			div.classList.remove("this");
+		else
+			div.classList.add("this");	
+	}
 }
+
 let lastName;
 let idRemember;
 function newInf(value,event,name){
 	let pathEl;
 	if (name !="textInfo")
 		pathEl = event.path[4];
-	else  
+	else
 		pathEl = event.path[2];
 	
 	let id = pathEl.id;	
@@ -143,7 +145,10 @@ function saveFix(text,name){
 		text.style.background = "#00ffff";
 }
 
-function saveChange(text,div,id,name){ 
+let global_div = undefined;
+
+function saveChange(text,div,id,name){
+	global_div = div;
 	div.onclick = function() {
 		if(event.target != text){
 			let returnObj = JSON.parse(localStorage.getItem(id)) 
@@ -151,6 +156,7 @@ function saveChange(text,div,id,name){
 			let serialObj = JSON.stringify(returnObj );
 			localStorage.setItem(id, serialObj);
 			text.style.background = "#00ffff";
+			global_div.onclick = undefined;
 		}
   };
 }
