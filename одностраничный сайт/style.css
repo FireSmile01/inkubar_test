@@ -1,0 +1,114 @@
+*{
+	margin: 0 auto;
+}
+
+#content{
+	width: 800px;
+	background-color: Moccasin;
+	padding: 10px;
+	border: 2px solid orange;
+}
+
+.createContactStart{
+	margin-bottom: 10px;
+	position: relative;
+}
+
+.createContact{
+	display: none;
+}
+
+.pole1{
+	margin: 10px 0px 10px 10px;
+	width: 40%;
+	
+}
+
+.info{
+	margin: 10px;
+}
+
+.pole2 {
+    width: 60%;
+    position: absolute;
+    top: 22px;
+    right: 0;
+    height: 80%;
+}
+
+.pole3{
+    width: 60%;
+    position: absolute;
+    top: 10px;
+    right: 0;
+    height: 80%;
+}
+
+.createInfo{
+	width: 90%;
+}
+
+.createInfo2{
+	height: 100%;
+	width: 90%;
+}
+
+.rovno{
+	position: relative;
+	right: 0;
+}
+
+.saveButton{
+	float: right; 
+}
+
+.crt{
+	display:none;
+}
+
+.search{
+	margin: 10px;
+}
+
+#pattern{
+	border: 1px solid black;
+	position: relative;
+	background: PapayaWhip;
+	display: none;
+}
+
+.newElem{
+	border: 1px solid black;
+	position: relative;
+	background: PapayaWhip;
+	margin: 10px;
+}
+
+.patterInfo2{
+	height: 94%;
+	width: 95%;
+}
+
+.deleteSquare{
+	position: absolute;
+	top:0;
+	right:0;
+	width: 20px;
+	height: 20px;
+	background-color: 	PeachPuff;
+	border: 1px solid black;
+	text-align: center;		
+}
+
+.this{
+	display: none;
+}
+
+#allPage{
+	min-height: 630px;
+}
+
+body{
+	position:relative;
+	min-height: 630px;
+}
