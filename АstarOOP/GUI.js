@@ -1,7 +1,7 @@
 'use strict';
 let singleton = Symbol();
 let singletonEnforcer = Symbol();
-class Floor{
+class Floor{ //класс отвечает за построение поля и манипуляции с полем
 	constructor(enforcer){
 		if (enforcer !== singletonEnforcer)
 			throw "Instantiation failed: use Floor.instance instead of new.";
@@ -31,7 +31,7 @@ class Floor{
 				elem.role = "way";
 		}
 		
-		this.thisEl = function() {			
+		this.thisEl = function() {	// метод отвечает за установку старта, стены и конечной точки		
 			let radio = document.getElementsByName("any radio");
 			
 			for(let i in radio)
@@ -88,7 +88,7 @@ class Floor{
 		}
 	};
 	
-	addEl(){		
+	addEl(){		// метод отвечает за создание поля, перед построением нового поле старое удаляется
 		this.clear();	
 		
 		this.getSize();
@@ -120,14 +120,14 @@ class Floor{
 		}
 	};
 	
-	clear(){
+	clear(){ // метод отвечает за удаление поля
 		this.unselectFloor();
 		this.content.innerHTML = "";
 		let i = 0;
 		this.arr.splice(this.arr[i],this.y);
 	};
 	
-	unselectFloor(){
+	unselectFloor(){ // метод отвечает за отчистку всего, с чем работал алгоритм, отчищает пройденный путь, удаляет все из массиво...
 		let arr = this.arr;
 		for(let i in arr)
 			for(let j in arr[i]){
@@ -145,7 +145,7 @@ class Floor{
 			
 	};		
 	
-	static get instance() {
+	static get instance() { // реализация паттерна одиночка
 		if (!this[singleton])
 			this[singleton] = new Floor(singletonEnforcer);	
 		return this[singleton];

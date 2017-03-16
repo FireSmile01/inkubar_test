@@ -4,17 +4,17 @@ var closeList = [];
 function start(){
 	floor.unselectFloor();
 	
-	let start = new Point(floor.selected_start); 
-	let end = new Point(floor.selected_end);
+	let start = new Point(floor.selected_start);  // создаем экземпляры класса Point используя поля объекта floor, по которым
+	let end = new Point(floor.selected_end); // лежат div'ы начала и конца
 	
-	start.getCoordinats();
+	start.getCoordinats(); // получаем i и j начала и конца
 	end.getCoordinats();
 	
-	start.g = 0;
-	openList.push(start);
+	start.g = 0; // g это стоимость точки, так как мы начинаем с этой точки, то логично, что шаг на нее равен 0
+	openList.push(start); // P.S на одну и туже точку нельзя вставать 2 раза, поэтому на старт мы не вернемся
 	
-	while(end.div.style.borderColor != "red"){
-			openList[0].div.style.borderColor = "blue";	 
+	while(end.div.style.borderColor != "red"){ // цикл будет работать пока финишь не будет найден, либо пока программа может
+			openList[0].div.style.borderColor = "blue";	 // проверять новые точки
 			addOpenList(openList[0], end);
 			if(openList.length == 0)
 				break;

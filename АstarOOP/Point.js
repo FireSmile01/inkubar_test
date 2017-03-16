@@ -5,7 +5,7 @@ class Point{
 		this.parentPoint = parentPoint;
 	};
 	
-	getCoordinats(){
+	getCoordinats(){ 
 		for (let i = 0; i < floor.arr.length; ++i)
 			for(let j = 0; j < floor.arr[i].length; ++j)
 				if(this.div === floor.arr[i][j]){
@@ -14,7 +14,7 @@ class Point{
 		}				
 	};
 	
-	static getLength(now, end){
+	static getLength(now, end){ // метод нужен для поиска расстояние между 2 точками, в данной программе это - эвристика
 		let radio = document.getElementsByName("radio");
 		let x0 = now.x;
 	        let y0 = now.y;
