@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<head>
+	<meta charset="utf-8">
+	<title>IS1 OOP</title> 
+	<link href="style.css" rel="stylesheet">
+	<script type="text/javascript" src="GUI.js"></script>
+	<script type="text/javascript" src="Point.js"></script>
+	<script type="text/javascript" src="algoritm.js"></script>
+	
+</head>
+
+
+<body>
+
+	<div id="manipulate">
+		<input class="textbox" id="textbox1" type="textbox" name="razmer1" value="7">X
+		<input class="textbox" id="textbox2" type="textbox" name="razmer2" value="7">
+		<input type="button" name="Create" value="Create the floor" OnClick="floor = Floor.instance; floor.addEl();"> 
+		<input type="button" name="Clear" value="Clear" OnClick="floor.unselectFloor();"> 
+		<div class="start">
+			<input type="button" name="Start" value="Start" onClick="start();"> 
+		</div>
+			<div class="radio">
+				<input type = "radio" name = "any radio" value = "Strt">Start 
+				<input type = "radio" name = "any radio" value = "Wall">Wall
+				<input type = "radio" name = "any radio" value = "End">End
+			</div>
+			
+			<div class="radio1">
+				<input type = "radio" name = "radio" value = "Manh">Manh
+				<input type = "radio" name = "radio" value = "Cheb">Cheb
+				<input type = "radio" name = "radio" value = "SQRT">SQRT
+			</div>
+	</div>
+	
+	<div id="content" align="center">
+		
+	</div>
+	
+</body>

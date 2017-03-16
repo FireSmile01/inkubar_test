@@ -1,0 +1,73 @@
+* {
+	margin: 0;
+}
+
+body {
+	background-color: orange;
+	min-width: 1200px;
+}
+
+#cpayce {
+    float: both;
+	margin-top: -5px;
+}
+
+.textbox {
+	max-width: 50px;
+	margin-right: 4px;
+}
+
+#manipulate {
+	background-color: green;
+	position: relative;
+	height: 30px;
+	border-bottom: 1px solid black;
+	padding: 5px;
+	margin-bottom: 50px;
+}
+
+.radio {
+	position: absolute;
+	right: 300px;
+	top: 8px;	
+}
+
+.radio1 {
+	position: absolute;
+	right: 10px;
+	top: 8px;
+	margin-right: 20px;
+}
+
+
+
+
+.object{
+	height: 30px;
+	width: 30px;
+	border: 1px solid black;
+	display: inline-block;
+	margin: 0;	
+	padding: 0;
+	position:relative;
+}
+
+.start {
+	position:absolute;
+	top: 5px;
+	left: 650px;
+}
+
+.redPoint {
+	position: relative;
+	height: 4px;
+	width: 4px;
+	border-radius: 2px;
+	background-color: red;
+	z-index: 100;
+	margin-top: 45%;
+}
+
+.hidden {
+	display: none;
+}
