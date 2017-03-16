@@ -35,7 +35,7 @@ function addOpenList(parentPoint, end){
 	let arr = floor.arr;
 	
 	for (let k = j-1; k < j+2; ++k)
-		for(let l = i-1; l < i+2; ++l){
+		for(let l = i-1; l < i+2; ++l)
 			if(l >= 0 && k >= 0 &&  k < divX && l < divY)
 				if( arr[k][l].role != "wall"  &&  arr[k][i].role != "wall"  && arr[j][l].role != "wall" &&
 				 arr[k][l].role != "step" && arr[k][l].role != "openList" && arr[k][l].role != "start"){
@@ -56,14 +56,17 @@ function addOpenList(parentPoint, end){
 						return;
 					}
 					openList.push(point);
-				}console.log(openList);}
+				}
 	openList.sort(sortFunction);
 	for (let a in openList){
 		openList[a].div.style.background = "gray";
 		openList[a].div.role = "openList";
 	}
 	openList[0].role = "step";
-	closeList.push(openList[0]);	
+
+	for(let i in closeList)
+		if(closeList[i].x === openList[0].x && closeList[i].y === openList[0].y)
+			closeList.push(openList[0]);	
 }
 
 function sortFunction(a, b){
